@@ -1,0 +1,153 @@
+#time0{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#time1{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.header{
+    margin-top: 1rem;
+}
+
+.content{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 5%;
+}
+
+#time1{
+    margin-top: 1.3rem;
+}
+
+.info{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.ct{
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.orang{
+    width: 15%;
+    position: absolute;
+}
+
+.myname{
+    text-align: center;
+    margin-top: 1.5rem;
+    font-weight: bold
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+.home_text {
+    text-align: center;
+    font-family: 'Jua', sans-serif;
+    margin-top: 7rem;
+}
+
+.home_text1 {
+    text-align: center;
+    font-family: 'Jua', sans-serif;
+    margin-top: 1.5rem;
+}
+
+.navbar-brand{
+    font-family: 'Jua', sans-serif;
+}
+
+.nav-link.dropdown-toggle{
+    color: #000;
+    text-align: center;
+}
+
+.dropdown-menu {
+    display: table; margin-left: auto; margin-right: auto; display: inline-block;
+}
+
+.nav-link.dropdown-toggle:focus, .nav-link.dropdown-toggle:hover {
+    color: #000;
+}
+
+.dropdown{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link.dropdown-toggle{
+    position: absolute;
+    top: -50px;
+    font-family: 'Jua', sans-serif;
+    font-size: 1.5rem;
+    border: 3px solid #000;
+    padding-right: 10rem;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.55);
+    border-color: rgba(0,0,0,.1);
+    border: none;
+}
+
+.dropdown-menu{
+    position: absolute;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: translate3d(103px, 22px, 0px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    left: -13px;
+}
+
+.dropdown-menu.show {
+    position: absolute;
+    left: 1px;
+}
+
+@media screen and (max-width: 600px) {
+    .nav-link.dropdown-toggle{
+        width: 80%;
+        margin: 0 auto;
+    }
+    /* .home_text{
+        font-size: 1.5rem;
+    } */
+}
+
+.schedule{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 7%;
+    font-family: 'Jua', sans-serif;
+    font-size: 2rem;
+    border-style:solid;
+    padding: 13px;
+    border-width:3px;
+    border-color: #000;
+}
+
+.mon{
+    padding-bottom: 15px;
+    border-style:solid;
+    padding: 13px;
+    border-width:1.5px;
+    border-color: #000;
+}
+
+.patchnote{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+}
