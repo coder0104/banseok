@@ -5,9 +5,8 @@
  * License: http://graphberry.com/pages/license
 -->
 <!DOCTYPE html>
-<html>
 <head>
-    <title>Modus - Single Page Portfolio Theme | GraphBerry.com</title>
+    <title>1-9 급식, 시간표</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,8 +52,8 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="main-navbar">
 		      <ul class="nav navbar-nav navbar-right">
-		        <li class="active"><a class="smoothScroll" href="schedule.html">급식표 <span class="sr-only">(current)</span></a></li>
-		        <li><a class="smoothScroll" href="#portfolio">시간표</a></li>
+				<li><a class="smoothScroll" href="#portfolio">급식표</a></li>
+					<li class="active"><a class="smoothScroll" href="#ser">시간표 <span class="sr-only">(current)</span></a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container -->
@@ -120,6 +119,45 @@
 			</div>
 
 		</section>
+		<section id="ser">
+
+			<!-- Section title -->
+			<h1 class="sr-only">Services section</h1>
+			
+			<div class="container">
+				<div id="ct" class="maintime"></div>
+				<div class="row" style='font-family:"Do Hyeon", sans-serif;'>
+					
+
+
+					<div class="col-md-4">
+
+						<div class="service1">
+							<figure>
+								<figcaption><h1 id="date">Work</h1></figcaption>
+								<div class="largediv">
+									<p id="mon0">국어</p>
+									<p id="mon1">국어</p>
+									<p id="mon2">국어</p>
+									<p id="mon3">국어</p>
+									<p id="mon4">국어</p>
+									<p id="mon5">국어</p>
+									<p id="mon6">국어</p>
+									<p id="mon">CIP</p>
+								</div>
+							</figure>
+							
+								
+						</div>
+
+					</div>
+				
+
+				</div>
+
+			</div>
+
+		</section>
 
 		
 	
@@ -134,6 +172,8 @@
                 var year = today.getFullYear();
                 var month = ('0' + (today.getMonth() + 1)).slice(-2);
                 var date = ('0' + today.getDate()).slice(-2);
+				const birthday = new Date(year+'-'+month+'-'+date);
+				const day1 = birthday.getDay();
                 document.getElementById('ct').innerHTML = month + '월 '+ date +'일'
 
                 request.open("GET","https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=G10&SD_SCHUL_CODE=7430048&KEY=ef5c41c7fa004a8bb4e7ef6fb7ce58bc&MLSV_YMD=" + year + month + date);
@@ -164,33 +204,38 @@
                     }
                 }
 
-				mon = ['1. 체육', '2. 회화', '3. 수학', '4. 한국사', '5. 국어', '6. 통사', '7. 통과']
-        tue = ['1. 국어', '2. 정보', '3. 유도', '4. 영어', '5. 한국사', '6. 수학', '7. 미술']
-        wed = ['1. 종교학', '2. 영어', '3. 인문학', '4. 한국사', '5. 음악', '6. 통사(남찬희T)', '7. 수학(엄태호T)']
-        thu = ['1. 과탐실', '2. 국어', '3. 수학', '4. 통과(신용훈T)', '5. 진로', '6. 회화(문가람T)', '7. 영어']
-        fri = ['1. 국어', '2. 정보', '3. 통사(임정현T)', '4. 통과', '5. 자율', '6. 창체', '7.창체']
+				mon = ['1. 체육(최경환 선생님)', '2. 회화(최대열 선생님)', '3. 수학(심소헌 선생님)', '4. 한국사(최장문 선생님)', '5. 국어(사선혜 선생님)', '6. 통사(김준호 선생님)', '7. 통과(이희택 선생님)']
+        tue = ['1. 국어(사선혜 선생님)', '2. 정보(김선규 선생님)', '3. 유도(김윤철 선생님)', '4. 영어(최대열 선생님)', '5. 한국사(최장문 선생님)', '6. 수학(심소헌 선생님)', '7. 미술(김현지 선생님)']
+        wed = ['1. 종교학(강준원 목사님)', '2. 영어(최대열 선생님)', '3. 인문학', '4. 한국사(최장문 선생님)', '5. 음악(정유진 선생님)', '6. 통사(남찬희 선생님)', '7. 수학(엄태호 선생님)']
+        thu = ['1. 과탐실(이진용 선생님)', '2. 국어(사선혜 선생님)', '3. 수학(심소헌 선생님)', '4. 통과(신용운 선생님)', '5. 진로(이진회 선생님)', '6. 회화(문가람 선생님)', '7. 영어(최대열 선생님)']
+        fri = ['1. 국어(사선혜 선생님)', '2. 정보(김선규 선생님)', '3. 통사(임정현 선생님)', '4. 통과(이희택 선생님)', '5. 자율', '6. 창체', '7.창체']
         
         if (day1 == 1){
+			document.getElementById('date').innerHTML = "월요일"
             for (i=0; i<=7; i++){
                 document.getElementById('mon'+i).innerHTML = mon[i]
             }
         }
         if (day1 == 2){
+			document.getElementById('date').innerHTML = "화요일"
             for (i=0; i<=7; i++){
                 document.getElementById('mon'+i).innerHTML = tue[i]
             }
         }
         if (day1 == 3){
+			document.getElementById('date').innerHTML = "수요일"
             for (i=0; i<=7; i++){
                 document.getElementById('mon'+i).innerHTML = wed[i]
             }
         }
         if (day1 == 4){
+			document.getElementById('date').innerHTML = "목요일"
             for (i=0; i<=7; i++){
                 document.getElementById('mon'+i).innerHTML = thu[i]
             }
         }
         if (day1 == 5){
+			document.getElementById('date').innerHTML = "금요일"
             for (i=0; i<=7; i++){
                 document.getElementById('mon'+i).innerHTML = fri[i]
                 

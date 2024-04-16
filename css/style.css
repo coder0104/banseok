@@ -2,6 +2,16 @@
 /**********************
 DEFAULT
 ***********************/
+#date{
+	font-size: 4rem;
+	font-family: "Do Hyeon", sans-serif;
+	color: #597c72;
+}
+
+.largediv{
+	font-size: 2.5rem;
+}
+
 .maintime{
 	text-align: center;
 	font-weight: bold;
@@ -568,6 +578,35 @@ SERVICES SECTION
 	margin-top: 20px;
 }
 
+#service1 {
+	padding: 120px 0;
+}
+
+.service1 {
+	display: flex;
+	margin: 0 auto;
+	background: #ffffff;
+	padding: 58px 61px 98px;
+	text-align: center;
+	margin-top: 35px;
+	width: 100%;
+}
+
+.service1 .separator {
+	width: 30px;
+	height: 2px;
+	background-color: #00c7fc;
+	margin: 25px auto 0;
+}
+
+.service1 h5 {
+	margin-top: 20px;
+	color: #231f20;
+}
+
+.service1 p {
+	margin-top: 20px;
+}
 /**********************
 CLIENTS SECTION
 ***********************/
