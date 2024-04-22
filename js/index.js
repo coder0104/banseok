@@ -11,6 +11,7 @@ const birthday = new Date(year+'-'+month+'-'+date);
 const day1 = birthday.getDay();
 const div = document.getElementById('hello')
 document.getElementById('ct').innerHTML = month + '월 '+ date +'일'
+console.log(day1)
 
 request.open("GET","https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=G10&SD_SCHUL_CODE=7430048&KEY=ef5c41c7fa004a8bb4e7ef6fb7ce58bc&MLSV_YMD=" + year + month + date);
 request.send();
@@ -78,4 +79,10 @@ if (day1 == 5){
     div.remove();
 
     }
+}
+
+if (day1 == 0 || day1 == 6){
+    document.getElementById('date').innerHTML = "주말"
+    document.getElementById('hellp').remove()
+    document.getElementById('weekend').style.display = 'block';
 }

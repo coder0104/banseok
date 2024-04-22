@@ -2,6 +2,14 @@
 /**********************
 DEFAULT
 ***********************/
+.weekend{
+	display: none;
+	text-align: center;
+	font-family: "Do Hyeon", sans-serif;
+	font-size: 5rem;
+	color: #597c72;
+}
+
 #date{
 	font-size: 4rem;
 	font-family: "Do Hyeon", sans-serif;
