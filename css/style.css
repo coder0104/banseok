@@ -24,6 +24,7 @@ DEFAULT
 	text-align: center;
 	font-weight: bold;
 	font-size: 4rem;
+	margin-top: 1rem;
 	color: #597c72;
 }
 
@@ -46,6 +47,30 @@ DEFAULT
 }
 
 #value1{
+	font-size: 2.5rem;
+	font-family:"Do Hyeon", sans-serif;
+	color: #707070;
+}
+
+#valval0{
+	font-family:"Do Hyeon", sans-serif;
+    font-size: 4rem;
+	color: #597c72;
+}
+
+#values0{
+	font-size: 2.5rem;
+	font-family:"Do Hyeon", sans-serif;
+	color: #707070;
+}
+
+#valval1{
+	font-family:"Do Hyeon", sans-serif;
+    font-size: 4rem;
+	color: #597c72;
+}
+
+#values1{
 	font-size: 2.5rem;
 	font-family:"Do Hyeon", sans-serif;
 	color: #707070;
