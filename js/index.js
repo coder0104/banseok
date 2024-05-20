@@ -16,45 +16,9 @@ const day1 = birthday.getDay();
 const div = document.getElementById('hello');
 const numdate = Number(date)+1
 document.getElementById('ct').innerHTML = month + '월 '+ date +'일'
-document.getElementById('ct1').innerHTML = month + '월 '+ numdate  +'일'
 console.log(day1)
 
-request.open("GET","https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=G10&SD_SCHUL_CODE=7430048&KEY=ef5c41c7fa004a8bb4e7ef6fb7ce58bc&MLSV_YMD=" + year + month + date);
-request.send();
-
-        request.onreadystatechange = function() {
-    if (request.readyState == 4) {
-    
-        if (request.status >= 200 && request.status < 300) {
-            var xml = request.responseXML;
-            
-            var names = xml.getElementsByTagName("DDISH_NM");
-            var ages = xml.getElementsByTagName("MMEAL_SC_NM");
-            var message = xml.getElementsByTagName("MESSAGE");
-
-            console.log(message)
-
-            for (var i = 0; i < names.length; i++) {
-                var value = names[i].childNodes[0].nodeValue;
-                var time = ages[i].childNodes[0].nodeValue;
-                console.log(time + ":" + value);
-                console.log('hello' + i)
-                document.getElementById('time' + i).innerHTML = time
-                document.getElementById('value' + i).innerHTML = value
-            }
-
-
-            
-
-            //요청하는게 xml이면 responseXML 일반텍스트면 response
-
-        } else {
-            alert("에러!");
-        }
-    }
-}
-
-request1.open("GET","https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=G10&SD_SCHUL_CODE=7430048&KEY=ef5c41c7fa004a8bb4e7ef6fb7ce58bc&MLSV_YMD=" + year + month + numdate);
+request1.open("GET","https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=G10&SD_SCHUL_CODE=7430048&KEY=ef5c41c7fa004a8bb4e7ef6fb7ce58bc&MLSV_YMD=" + year + month + date);
 request1.send();
 
 request1.onreadystatechange = function() {
@@ -71,8 +35,8 @@ request1.onreadystatechange = function() {
                 var time = ages[i].childNodes[0].nodeValue;
                 console.log(time + ":" + value);
                 console.log('hello' + i)
-                document.getElementById('valval' + i).innerHTML = time
-                document.getElementById('values' + i).innerHTML = value
+                document.getElementById('time' + i).innerHTML = time
+                document.getElementById('value' + i).innerHTML = value
             }
 
             //요청하는게 xml이면 responseXML 일반텍스트면 response
@@ -83,33 +47,7 @@ request1.onreadystatechange = function() {
     }
 }
 
-request.open("GET","https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=G10&SD_SCHUL_CODE=7430048&KEY=ef5c41c7fa004a8bb4e7ef6fb7ce58bc&MLSV_YMD=" + year + month + numdate);
-request.send();
 
-        request.onreadystatechange = function() {
-    if (request.readyState == 4) {
-    
-        if (request.status >= 200 && request.status < 300) {
-            var xml = request.responseXML;
-            
-            var names = xml.getElementsByTagName("DDISH_NM");
-            var ages = xml.getElementsByTagName("MMEAL_SC_NM");
-            for (var i = 0; i < names.length; i++) {
-                var value = names[i].childNodes[0].nodeValue;
-                var time = ages[i].childNodes[0].nodeValue;
-                console.log(time + ":" + value);
-                console.log('hello' + i)
-                document.getElementById('valval' + i).innerHTML = time
-                document.getElementById('values' + i).innerHTML = value
-            }
-
-            //요청하는게 xml이면 responseXML 일반텍스트면 response
-
-        } else {
-            alert("에러!");
-        }
-    }
-}
 
 mon = ['1. 체육(최경환 선생님)', '2. 회화(최대열 선생님)', '3. 수학(심소헌 선생님)', '4. 한국사(최장문 선생님)', '5. 국어(사선혜 선생님)', '6. 통사(김준호 선생님)', '7. 통과(이희택 선생님)']
 tue = ['1. 국어(사선혜 선생님)', '2. 정보(김선규 선생님)', '3. 유도(김윤철 선생님)', '4. 영어(최대열 선생님)', '5. 한국사(최장문 선생님)', '6. 수학(심소헌 선생님)', '7. 미술(김현지 선생님)']
