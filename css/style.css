@@ -2,6 +2,84 @@
 /**********************
 DEFAULT
 ***********************/
+
+.popup_btn a {
+	padding: 20px;
+	color: #fff;
+  }
+.asdfasdf{
+	width: 30%;
+}
+  
+  .overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 900;
+  }
+  
+  .overlay:target {
+	visibility: visible;
+	opacity: 1;
+  }
+  
+  .popup {
+	position: fixed;
+	width: 60%;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* "delay" the visibility transition */
+	-webkit-transition: opacity .5s, visibility 0s linear .5s;
+	transition: opacity .5s, visibility 0s linear .5s;
+	z-index: 1;
+  }
+  
+  .popup:target {
+	visibility: visible;
+	opacity: 1;
+	/* cancel visibility transition delay */
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+  }
+  
+  .popup-close {
+	position: absolute;
+	padding: 10px;
+	max-width: 500px;
+	border-radius: 10px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(255, 255, 255, .9);
+  }
+  
+  .popup .close {
+	right: 5px;
+	top: 5px;
+	padding: 5px;
+	color: #fff;
+	transition: color .3s;
+	font-size: 2em;
+	line-height: .6em;
+	font-weight: bold;
+  }
+  
+  .popup .close:hover {
+	color: #00E5EE;
+  }
+.parkjiwoo{
+	position: absolute;
+	z-index: 1;
+	width:70%;
+	margin: 0 auto;
+}
+
 .weekend{
 	display: none;
 	text-align: center;
