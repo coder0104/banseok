@@ -18,7 +18,7 @@ const numdate = Number(date)+1
 document.getElementById('ct').innerHTML = month + '월 '+ date +'일'
 console.log(day1)
 
-request1.open("GET","https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=G10&SD_SCHUL_CODE=7430048&KEY=ef5c41c7fa004a8bb4e7ef6fb7ce58bc&MLSV_YMD=" + year + month + date);
+request1.open("GET","https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=G10&SD_SCHUL_CODE=7430238&KEY=ef5c41c7fa004a8bb4e7ef6fb7ce58bc&MLSV_YMD=" + year + month + date);
 request1.send();
 
 request1.onreadystatechange = function() {
